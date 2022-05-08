@@ -1,0 +1,326 @@
+/*text fonts*/
+.font {
+    font-family: 'Lato', sans-serif;
+    font-family: 'Playfair Display', serif;
+    font-family: 'PT Sans', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Red Hat Mono', monospace;
+}
+
+
+/*background*/
+html {
+    height: 100%;
+    background: linear-gradient(rgba(196, 102, 0, 0.6), rgba(155, 89, 182, 0.6));
+}
+
+
+.form-container {
+    margin-top: 15px;
+    text-align: center;
+}
+
+
+/*cubes progress bar*/
+.list-progress-bar2 {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 10px;
+    max-width: 1000px;
+    width: 360px;
+    margin-left: 495px;
+    padding-top: 40px;
+}
+
+
+/*progress bar connectors*/
+.list-progress-bar2::after {
+    content: "";
+    width: 360px;
+    height: 2px;
+    margin-top: 45px;
+    background: white;
+    position: absolute;
+    top: 9px;
+    z-index: -1; /*puts the line behind cubes*/
+}
+
+
+/*connectors not visible before the first click*/
+.list-progress-bar2:first-child:after {
+    content: none;
+}
+
+
+/*completed steps in connectors*/
+.list-progress-bar2 li.active:before, .list-progress-bar2 li.active:after {
+    background: cornflowerblue;
+    color: white;
+}
+
+
+/*regular progress bar*/
+.list-progress-bar {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 60px;
+    max-width: 1000px;
+    width: 450px;
+    margin-left: 450px;
+    list-style: none;
+    word-spacing: 1px;
+    font-size: 15px;
+}
+
+
+/*cubes parameters*/
+.cube {
+    background: white;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: center;
+    text-align: center;
+    border-radius: 2px;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin-left: 50px;
+}
+
+
+/*first slide parameters*/
+.step1 {
+    width: 400px;
+    height: 400px;
+    background-color: white;
+    margin-left: 510px;
+    padding-top: 20px;
+    box-shadow: 0px 0px 15px 1px rgba(0,0,0, 0.3);
+    border-radius: 3px;
+}
+
+/*second slide parameters*/
+.step2 {
+    width: 500px;
+    height: 450px;
+    background-color: white;
+    margin-left: 460px;
+    padding-top: 20px;
+    margin-top: 100px;
+    box-shadow: 0px 0px 15px 1px rgba(0,0,0, 0.3);
+    border-radius: 3px;
+}
+
+/*third slide parameters*/
+.step3 {
+    width: 400px;
+    height: 500px;
+    background-color: white;
+    margin-left: 510px;
+    padding-top: 20px;
+    margin-top: 100px;
+    box-shadow: 0px 0px 15px 1px rgba(0,0,0, 0.3);
+    border-radius: 3px;
+}
+
+/*inputs in first slide*/
+p {
+    width: 300px;
+    height: 50px;
+    line-height: 50px;
+    word-break: break-all;
+    border-radius: 2px;
+    box-shadow: 0px 0px 1px 1px rgba(0,0,0, 0.2);
+    margin-left: 0px;
+    margin-top: 1px;
+    text-align: left;
+    padding-left: 10px;
+
+}
+
+/*inputs in second slide*/
+p2 {
+    width: 400px;
+    height: 50px;
+    line-height: 50px;
+    word-break: break-all;
+    border-radius: 2px;
+    box-shadow: 0px 0px 1px 1px rgba(0,0,0, 0.2);
+    margin-left: 0px;
+    margin-top: 17px;
+    text-align: left;
+    padding-left: 10px;
+
+}
+
+
+/*button next in first slide*/
+.next-action-button {
+    position: center;
+    margin-right: 100px;
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    background-color: cornflowerblue;
+    text-align: center;
+    border-radius: 1px;
+    cursor: pointer;
+    width: 100px;
+    height: 35px;
+}
+
+
+/*button next in second slide*/
+.next-action-button2 {
+    position: center;
+    margin-right: 50px;
+    margin-top: 20px;
+    margin-left: 25px;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    background-color: cornflowerblue;
+    text-align: center;
+    border-radius: 1px;
+    cursor: pointer;
+    width: 100px;
+    height: 35px;
+}
+
+/*button previous in second slide*/
+.previous-action-button {
+    position: center;
+    margin-right: 50px;
+    margin-top: 20px;
+    margin-left: 25px;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    background-color: cornflowerblue;
+    text-align: center;
+    border-radius: 1px;
+    cursor: pointer;
+    width: 100px;
+    height: 35px;
+}
+
+/*button previous in third slide*/
+.previous-action-button2 {
+    position: center;
+    margin-right: 115px;
+    margin-top: 20px;
+    margin-left: 15px;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    background-color: cornflowerblue;
+    text-align: center;
+    border-radius: 1px;
+    cursor: pointer;
+    width: 100px;
+    height: 35px;
+}
+
+
+/*button submit in third slide*/
+.submit-action-button {
+    position: center;
+    margin-right: 100px;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    background-color: cornflowerblue;
+    text-align: center;
+    border-radius: 1px;
+    cursor: pointer;
+    width: 100px;
+    margin-top: 10px;
+    height: 35px;
+}
+
+
+
+
+/*buttons inputs*/
+input {
+    border: hidden;
+    width: 295px;
+    height: 44px;
+}
+
+textarea {
+    border: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
