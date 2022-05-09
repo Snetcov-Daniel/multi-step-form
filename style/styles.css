@@ -14,96 +14,101 @@ html {
     background: linear-gradient(rgba(196, 102, 0, 0.6), rgba(155, 89, 182, 0.6));
 }
 
+.form-container {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    width: 300px;
+    height: 50px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 0 20px;
+    margin: 10px 0;
+}
+
+ul#progressbar {
+    width: 800px;
+    margin: 0 auto;
+}
 
 .form-container {
     margin-top: 15px;
     text-align: center;
 }
 
-
-/*cubes progress bar*/
-.list-progress-bar2 {
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    margin-bottom: 10px;
-    max-width: 1000px;
-    width: 360px;
-    margin-left: 495px;
-    padding-top: 40px;
+#progressbar {
+	margin-bottom: 30px;
+	overflow: hidden;
+	counter-reset: step;
+}
+#progressbar li {
+	list-style-type: none;
+	color: white;
+	text-transform: uppercase;
+	font-size: 9px;
+	width: 33.33%;
+	float: left;
+	position: relative;
 }
 
-
-/*progress bar connectors*/
-.list-progress-bar2::after {
-    content: "";
-    width: 360px;
-    height: 2px;
-    margin-top: 45px;
-    background: white;
-    position: absolute;
-    top: 9px;
-    z-index: -1; /*puts the line behind cubes*/
+#progressbar li:before {
+	content: counter(step);
+	counter-increment: step;
+	width: 20px;
+	line-height: 20px;
+	display: block;
+	font-size: 10px;
+	color: #333;
+	background: white;
+	border-radius: 3px;
+	margin: 0 auto 5px auto;
 }
 
-
-/*connectors not visible before the first click*/
-.list-progress-bar2:first-child:after {
-    content: none;
+#progressbar li:after {
+	content: '';
+	width: 100%;
+	height: 2px;
+	background: white;
+	position: absolute;
+	left: -50%;
+	top: 9px;
+	z-index: -1;
+}
+#progressbar li:first-child:after {
+	content: none; 
 }
 
-
-/*completed steps in connectors*/
-.list-progress-bar2 li.active:before, .list-progress-bar2 li.active:after {
-    background: cornflowerblue;
-    color: white;
+#progressbar li.active:before,  #progressbar li.active:after{
+    transition: 2s;
+	background: #27AE60;
+	color: white;
 }
-
-
-/*regular progress bar*/
-.list-progress-bar {
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    margin-bottom: 60px;
-    max-width: 1000px;
-    width: 450px;
-    margin-left: 450px;
-    list-style: none;
-    word-spacing: 1px;
-    font-size: 15px;
-}
-
-
-/*cubes parameters*/
-.cube {
-    background: white;
-    height: 30px;
-    width: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: center;
-    text-align: center;
-    border-radius: 2px;
-}
-
 
 .container {
     display: flex;
     flex-direction: column;
-    width: 400px;
-    margin-left: 50px;
+    align-items: center;
 }
 
+.forms {
+  width: 500px;
+  height: 500px;
+  margin: 50px auto;
+  overflow: hidden;
+  position: relative;
+}
 
+.step {
+  transition: 1s;
+  position: absolute;
+}
 /*first slide parameters*/
 .step1 {
-    width: 400px;
-    height: 400px;
+    width: 500px;
+    height: 500px;
     background-color: white;
-    margin-left: 510px;
-    padding-top: 20px;
     box-shadow: 0px 0px 15px 1px rgba(0,0,0, 0.3);
     border-radius: 3px;
 }
@@ -111,63 +116,28 @@ html {
 /*second slide parameters*/
 .step2 {
     width: 500px;
-    height: 450px;
+    height: 500px;
     background-color: white;
-    margin-left: 460px;
-    padding-top: 20px;
-    margin-top: 100px;
     box-shadow: 0px 0px 15px 1px rgba(0,0,0, 0.3);
     border-radius: 3px;
+    top: 2000px;
 }
 
 /*third slide parameters*/
 .step3 {
-    width: 400px;
+    width: 500px;
     height: 500px;
     background-color: white;
-    margin-left: 510px;
-    padding-top: 20px;
-    margin-top: 100px;
     box-shadow: 0px 0px 15px 1px rgba(0,0,0, 0.3);
     border-radius: 3px;
-}
-
-/*inputs in first slide*/
-p {
-    width: 300px;
-    height: 50px;
-    line-height: 50px;
-    word-break: break-all;
-    border-radius: 2px;
-    box-shadow: 0px 0px 1px 1px rgba(0,0,0, 0.2);
-    margin-left: 0px;
-    margin-top: 1px;
-    text-align: left;
-    padding-left: 10px;
-
-}
-
-/*inputs in second slide*/
-p2 {
-    width: 400px;
-    height: 50px;
-    line-height: 50px;
-    word-break: break-all;
-    border-radius: 2px;
-    box-shadow: 0px 0px 1px 1px rgba(0,0,0, 0.2);
-    margin-left: 0px;
-    margin-top: 17px;
-    text-align: left;
-    padding-left: 10px;
-
+    top: 3000px;
 }
 
 
 /*button next in first slide*/
 .next-action-button {
     position: center;
-    margin-right: 100px;
-    margin-top: 10px;
+    margin-top: 20px;
     font-size: 15px;
     font-weight: bold;
     color: white;
@@ -183,9 +153,6 @@ p2 {
 /*button next in second slide*/
 .next-action-button2 {
     position: center;
-    margin-right: 50px;
-    margin-top: 20px;
-    margin-left: 25px;
     font-size: 15px;
     font-weight: bold;
     color: white;
@@ -200,9 +167,6 @@ p2 {
 /*button previous in second slide*/
 .previous-action-button {
     position: center;
-    margin-right: 50px;
-    margin-top: 20px;
-    margin-left: 25px;
     font-size: 15px;
     font-weight: bold;
     color: white;
@@ -216,10 +180,6 @@ p2 {
 
 /*button previous in third slide*/
 .previous-action-button2 {
-    position: center;
-    margin-right: 115px;
-    margin-top: 20px;
-    margin-left: 15px;
     font-size: 15px;
     font-weight: bold;
     color: white;
@@ -231,11 +191,21 @@ p2 {
     height: 35px;
 }
 
+input[type="button"]{
+    width: 100px;
+    height: 40px;
+}
+
+.btn-wrapper {
+    width: 300px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
 
 /*button submit in third slide*/
 .submit-action-button {
-    position: center;
-    margin-right: 100px;
     font-size: 15px;
     font-weight: bold;
     color: white;
@@ -245,82 +215,10 @@ p2 {
     cursor: pointer;
     width: 100px;
     margin-top: 10px;
-    height: 35px;
-}
-
-
-
-
-/*buttons inputs*/
-input {
-    border: hidden;
-    width: 295px;
-    height: 44px;
+    height: 40px;
 }
 
 textarea {
-    border: hidden;
+    width: 342px;
+    height: 50px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
