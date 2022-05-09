@@ -1,61 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CoolestFormYouDEverSee.md</title>
+
+    <link rel="stylesheet" href="style/styles.css">
+
 </head>
 <body>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,100&family=PT+Sans&family=Playfair+Display:ital@1&family=Raleway:wght@100&family=Red+Hat+Mono:wght@300&display=swap" rel="stylesheet">
+
     <header>
 
     </header>
+
     <main>
         <section class="form-container">
             <div class="progress-bar">
-                <ul class="list progress-bar">
-                    <li>Account Setup</li>
-                    <li>Social Profiles</li>
-                    <li>Personal Details</li>
+                <ul class="list-progress-bar2">
+                    <li class="cube">1</li>
+                    <li class="cube">2</li>
+                    <li class="cube">3</li>
                 </ul>
+              <div>
+                  <ul class="list-progress-bar">
+                    <li class="font">Account Setup</li>
+                    <li class="font">Social Profiles</li>
+                    <li class="font">Personal Details</li>
+                  </ul>
+              </div>
             </div>
-            <div class="form step-1">
-                <h2>CREATE YOUR ACCOUNT</h2>
-                <h3>This is step1</h3>
-                <form action="">
-                    <input type="text" name="email" placeholder="Email">
-                    <input type="password" name="pass" placeholder="Password">
-                    <input type="password" name="cpass" placeholder="Confirm Password">
-                    <input type="button" name="next" class="next action-button" value="Next">
+            <div class="step1">
+                <h2 class="font">CREATE YOUR ACCOUNT</h2>
+                <h3 class="font">This is step 1</h3>
+                <form action="" class="container">
+                    <p> <input type="text" name="email" placeholder="Email" class="font"></p>
+                    <p> <input type="password" name="pass" placeholder="Password" class="font"></p>
+                    <p> <input type="password" name="cpass" placeholder="Confirm Password" class="font"></p>
+                    <p1><input type="button" name="next" class="next-action-button" value="Next" class="font"></p1>
                 </form>
             </div>
-            <div class="form step-2">
-                <h2>Social Profiles</h2>
-                <h3>Your presence on the social network</h3>
-                <form action="">
-                    <input type="text" name="twitter" placeholder="Twitter">
-                    <input type="text" name="facebook" placeholder="Facebook">
-                    <input type="text" name="gplus" placeholder="Google Plus">
-                    <input type="button" name="previous" class="previous action-button" value="Previous">
-                    <input type="button" name="next" class="next action-button" value="Next">
+            <div class="step2">
+                <h2 class="font">Social Profiles</h2>
+                <h3 class="font">Your presence on the social network</h3>
+                <form action="" class="container">
+                    <p2> <input type="text" name="twitter" placeholder="Twitter" class="font"> </p2>
+                    <p2> <input type="text" name="facebook" placeholder="Facebook" class="font"></p2>
+                    <p2> <input type="text" name="gplus" placeholder="Google Plus" class="font"></p2>
+                    <p1><input type="button" name="previous" class="previous-action-button" value="Previous" class="font"></p1>
+                    <p1><input type="button" name="next" class="next-action-button2" value="Next" class="font"></p1>
                 </form>
             </div>
-            <div class="form step-3">
-                <h2>Personal Details</h2>
-                <h3>We will never sell it</h3>
-                <form action="">
-                    <input type="text" name="fname" placeholder="First Name">
-                    <input type="text" name="lname" placeholder="Last Name">
-                    <input type="text" name="phone" placeholder="Phone">
-                    <textarea name="address" placeholder="Address"></textarea>
-                    <input type="button" name="previous" class="previous action-button" value="Previous">
-                    <input type="submit" name="submit" class="submit action-button" value="Submit">
+            <div class="step3">
+                <h2 class="font">Personal Details</h2>
+                <h3 class="font">We will never sell it</h3>
+                <form action="" class="container">
+                    <p> <input type="text" name="fname" placeholder="First Name" class="font"></p>
+                    <p> <input type="text" name="lname" placeholder="Last Name" class="font"></p>
+                    <p> <input type="text" name="phone" placeholder="Phone" class="font"></p>
+                    <p> <textarea name="address" placeholder="Address" class="font"></textarea></p>
+                    <p1><input type="button" name="previous" class="previous-action-button2" value="Previous" class="font"></p1>
+                    <p1><input type="submit" name="submit" class="submit-action-button" value="Submit" class="font"></p1>
                 </form>
             </div>
         </section>
     </main>
+
     <footer>
 
     </footer>
+
 </body>
 </html>
